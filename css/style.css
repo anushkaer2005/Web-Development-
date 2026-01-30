@@ -1,0 +1,47 @@
+:root {
+  --color-primary: blue;
+  --color-secondary: black;
+  --font-base: Arial, Helvetica, sans-serif;
+  --space-md: 15px;
+}
+
+body {
+  font-family: var(--font-base);
+  color: var(--color-secondary);
+  margin: var(--space-md);
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--color-primary);
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+p {
+  max-width: 600px;
+}
+
+
+header,
+footer,
+section {
+  margin-bottom: var(--space-md);
+}
+
+nav a {
+  color: var(--color-primary);
+  text-decoration: none;
+  margin-right: var(--space-md);
+}
+
+
+img {
+  display: block;
+  margin-bottom: var(--space-md);
+  max-width: 100%;
+}

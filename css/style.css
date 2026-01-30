@@ -1,12 +1,8 @@
 :root {
-  --color-primary: blue;
-  --color-secondary: black;
-  --font-base: Arial, Helvetica, sans-serif;
-  --space-md: 18px;
-  --space-sm: 8px;
-  --space-lg: 24px;
-  --border-radius: 4px;
-
+  --primary-color: blue;
+  --text-color: black;
+  --font-base: Arial, sans-serif;
+  --space-md: 16px;
 }
 
 * {
@@ -17,47 +13,37 @@
 
 body {
   font-family: var(--font-base);
-  color: var(--color-secondary);
+  color: var(--text-color);
   margin: var(--space-md);
-  line-height: 1.6;
 }
 
 h1 {
-  font-size: 2rem;
-  color: var(--color-primary);
+  color: var(--primary-color);
   margin-bottom: var(--space-md);
 }
 
 h2 {
-  font-size: 1.5rem;
-  color: var(--color-primary);
-  margin-bottom: var(--space-sm);
+  color: var(--primary-color);
+  margin-bottom: 8px;
 }
 
 p {
-  max-width: 600px;
   margin-bottom: var(--space-md);
 }
 
-
-header,
-footer,
 section {
   padding: var(--space-md);
-  margin-bottom: var(--space-lg);
-  border: 1px solid #ddd;
-  border-radius: var(--border-radius);
+  margin-bottom: var(--space-md);
+  border: 1px solid lightgray;
 }
 
 nav a {
-  color: var(--color-primary);
+  color: var(--primary-color);
+  margin-right: 10px;
   text-decoration: none;
-  margin-right: var(--space-md);
 }
 
-
 img {
-  display: block;
-  margin-bottom: var(--space-md);
   max-width: 100%;
+  display: block;
 }

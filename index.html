@@ -1,112 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anushka Siwach</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Anushka Siwach</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
 
-    <!-- Header section with navigation -->
-    <header>
-        <h1>Anushka Siwach</h1>
-        <h2>Web Dev for Beginners</h2>
-            
-        <nav role="navigation" aria-label="Main Navigation">
-            <a href="pages/profile.html">Go to Profile</a><br>
-            <a href="pages/contact.html">Go to Contact</a>
-        </nav>
-    </header>
-    
-    <!-- Main content of the page -->
-    <main>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <!-- Header section with navigation -->
+        <header>
+            <div class="logo">
+                <h1>Anushka Siwach</h1>
+            </div>
 
-        <!-- About Section  -->
-        <section>
-            <h2>About</h2>
-            <ul>
-                <li>This is a web development course.</li>
-                <li>You have to practice it daily.</li>
-                <li>This is best for beginners.</li>
-            </ul>
-        </section>
+            <nav role="navigation" aria-label="Main Navigation">
+                <a href="pages/profile.html">Go to Profile</a>
+                <a href="pages/contact.html">Go to Contact</a>
+            </nav>
 
-        <!-- Education Section -->
-        <section>
-            <h2>Education</h2>
-            
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Class</th>
-                        <th>Roll No.</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Anu</td>
-                        <td>9th</td>
-                        <td>23</td>
-                    </tr>
-                    <tr>
-                        <td>Ram</td>
-                        <td>10th</td>
-                        <td>45</td>
-                    </tr>
-                    <tr>
-                        <td>Alex</td>
-                        <td>11th</td>
-                        <td>12</td>
-                    </tr>
-                    <tr>
-                        <td>Aksh</td>
-                        <td>12th</td>
-                        <td>22</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+            <button type="button">Button</button>
+        </header>
 
-        <!-- Skills Section     -->
-        <section>
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ul>
-        </section>
+        <!-- Main content of the page -->
+        <main class="layout">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h3>Sidebar</h3>
+                
+            </aside>
 
-        
+            <div class="content">
+                <h2>Web Development for Begginers</h2>
+                <p>It is a web development programming course.</p>
+                <p>It comprises lessons and assignments which enhance the skills.</p>
 
-        <!-- Media Content -->
+                <!-- About Section  -->
+                <section>
+                    <h2>About</h2>
+                    <ul>
+                        <li>This is a web development course.</li>
+                        <li>You have to practice it daily.</li>
+                        <li>This is best for beginners.</li>
+                    </ul>
+                </section>
 
-        <section>
-            <h2>Media</h2>
+                <!-- Education Section -->
+                <section">
+                    <h2>Education</h2>
 
-            <!-- Image -->
-            <figure>
-                <img src="/media/image.jpg" alt="laptop">
-                <figcaption>Working laptop.</figcaption>
-            </figure>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Class</th>
+                                <th>Roll No.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Anu</td>
+                                <td>9th</td>
+                                <td>23</td>
+                            </tr>
+                            <tr>
+                                <td>Ram</td>
+                                <td>10th</td>
+                                <td>45</td>
+                            </tr>
+                            <tr>
+                                <td>Alex</td>
+                                <td>11th</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td>Aksh</td>
+                                <td>12th</td>
+                                <td>22</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
 
-            <!-- Audio -->
-            <figure>
-                <audio controls>
-                    <source src="/media/audio.mpeg" type="audio/mpeg">
-                </audio>
-                <figcaption>Background Audio</figcaption>
-            </figure>
-        </section>
-    </main>
+                <!-- Skills Section -->
+                <section>
+                    <h2>Skills</h2>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </section>
 
-    <!-- Footer section with Date -->
-    <footer>
-        <p>30 January 2026</p>
-    </footer>
-</body>
+                <!-- Media Content -->
+                <section>
+                    <h2>Media</h2>
+
+                    <!-- Image -->
+                    <figure>
+                        <img src="media/image.jpg" alt="laptop">
+                        <figcaption>Working laptop.</figcaption>
+                    </figure>
+
+                    <!-- Audio -->
+                    <figure>
+                        <audio controls>
+                            <source src="media/audio.mpeg" type="audio/mpeg">
+                        </audio>
+                        <figcaption>Background Audio</figcaption>
+                    </figure>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer section with Date -->
+        <footer>
+            <p>31 January 2026</p>
+        </footer>
+    </body>
 </html>

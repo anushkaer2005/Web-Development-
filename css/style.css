@@ -76,9 +76,52 @@ figure {
   
 }
 
+form label {
+  display: block;
+  margin: 10px 0;
+}
+
+form input {
+  display: block;
+  margin-bottom: 15px;
+  padding: 8px;
+}
+
+form button {
+  margin-top: 15px;
+}
+
 /* *{
   outline: 1px solid grey;
 } */
+
+
+/* UI Interaction */
+
+nav a:hover{
+  text-decoration: underline;
+}
+
+nav a:focus{
+  outline: 3px solid blue;
+}
+
+nav a:active{
+  background-color: lemonchiffon;
+  transform: scale(0.97);
+}
+
+button:hover{
+  background-color: darkslateblue;
+}
+
+button:focus{
+  outline: 4px solid black;
+}
+
+audio:focus{
+  outline: 3px solid #115fb7;
+}
 
 
 /* Grid layout */
@@ -104,6 +147,25 @@ footer{
   padding: 0 var(--space-md);
   background-color: #f3f4f6;
 }
+
+/* Terrarium Layout */
+
+.terrarium {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+  justify-content: center;
+  align-items: stretch;
+}
+
+.card {
+  background-color: #e0f2fe;
+  padding: var(--space-md);
+  text-align: center;
+  font-weight: bold;
+}
+
+
 
 /* Mobile Navbar */
 @media (max-width: 600px) {

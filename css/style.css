@@ -3,7 +3,12 @@
   --text-color: #1f2937;
   --font-base: 16px;
   --space-md: 16px;
-  
+  --font-lg: 24px;
+  --font-xl: 32px;
+  --space-sm: 8px;
+  --space-lg: 24px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
 }
 
 body {
@@ -20,11 +25,11 @@ h1,h2 {
 }
 
 h1{
-  font-size: 32px;
+  font-size: var(--font-xl);
 }
 
 h2{
-  font-size: 24px;
+  font-size: var(--font-lg);
 }
 
 header {
@@ -56,8 +61,8 @@ button{
   background-color: #2563eb;
   color: white;
   border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
   cursor: pointer;
 }
 
@@ -96,33 +101,6 @@ form button {
 } */
 
 
-/* UI Interaction */
-
-nav a:hover{
-  text-decoration: underline;
-}
-
-nav a:focus{
-  outline: 3px solid blue;
-}
-
-nav a:active{
-  background-color: lemonchiffon;
-  transform: scale(0.97);
-}
-
-button:hover{
-  background-color: darkslateblue;
-}
-
-button:focus{
-  outline: 4px solid black;
-}
-
-audio:focus{
-  outline: 3px solid #115fb7;
-}
-
 
 /* Grid layout */
 .layout {
@@ -144,8 +122,10 @@ audio:focus{
 }
 
 footer{
-  padding: 0 var(--space-md);
-  background-color: #f3f4f6;
+  background-color: #8fc0d4;
+  text-align: center;
+  padding-top: var(--space-md);
+  padding-bottom: var(--space-md);
 }
 
 /* Terrarium Layout */
@@ -166,6 +146,58 @@ footer{
 }
 
 
+/* UI Interaction */
+
+nav a:hover{
+  text-decoration: underline;
+  transform: scale(0.97);
+}
+
+nav a:focus{
+  outline: 3px solid blue;
+}
+
+nav a:active{
+  background-color: lemonchiffon;
+  
+}
+
+button:hover{
+  background-color: darkslateblue;
+}
+
+button:focus{
+  outline: 4px solid black;
+}
+
+audio:focus{
+  outline: 3px solid #115fb7;
+}
+
+
+/*Utility Classes */
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 var(--space-md);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-md {
+  margin-top: var(--space-md);
+}
+
+.mb-lg {
+  margin-bottom: var(--space-lg);
+}
+
+
+
 
 /* Mobile Navbar */
 @media (max-width: 600px) {
@@ -173,11 +205,12 @@ footer{
     flex-direction: column;
     align-items: flex-start;
     gap: var(--space-md);
+    padding: var(--space-md);
   }
 
   nav {
     flex-direction: column;
-    gap: var(--space-md);
+    gap: var(--space-sm);
   }
 
   .layout {
@@ -196,4 +229,20 @@ footer{
     padding-right: 0;
     padding-bottom: var(--space-md);
   }
+
+  section {
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-md);
+  }
+
+  .terrarium{
+    padding-right: var(--space-md);
+  }
+
+  footer {
+    text-align: center;
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-md);
+  }
+
 }

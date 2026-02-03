@@ -201,11 +201,20 @@ audio:focus{
 
 /* Mobile Navbar */
 @media (max-width: 600px) {
+  header h1 {
+    margin-top: 0;
+  }
+
+  header button {
+    margin-bottom: 0;
+  }
+
   header {
     flex-direction: column;
     align-items: flex-start;
     gap: var(--space-md);
-    padding: var(--space-md);
+    padding-top: var(--radius-md);
+    padding-bottom: var(--space-md);
   }
 
   nav {

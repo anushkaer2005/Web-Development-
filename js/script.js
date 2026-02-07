@@ -71,3 +71,17 @@
 
 
 // Day:19
+
+let paragraph = document.querySelector("p");                   // by tag
+
+let section = document.querySelector(".mt-md");                // by class
+
+let educationSection = document.getElementById("education");    // by id
+
+let button = document.querySelector("button");                  // by tag
+
+button.addEventListener("click", function () {
+  paragraph.textContent = "JavaScript!";
+  section.style.backgroundColor = "#0cd59c";
+  educationSection.style.backgroundColor = "#fb205b";
+});

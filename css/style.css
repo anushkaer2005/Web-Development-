@@ -81,6 +81,10 @@ figure {
   
 }
 
+.contact-page main {
+  padding-left: 20px;
+}
+
 form label {
   display: block;
   margin: 10px 0;
@@ -129,7 +133,6 @@ footer{
 }
 
 /* Terrarium Layout */
-
 .terrarium {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -147,7 +150,6 @@ footer{
 
 
 /* UI Interaction */
-
 nav a:hover{
   text-decoration: underline;
   transform: scale(0.97);
@@ -176,7 +178,6 @@ audio:focus{
 
 
 /*Utility Classes */
-
 .container {
   max-width: 1200px;
   margin-left: auto;
@@ -197,6 +198,14 @@ audio:focus{
 }
 
 
+/* Counter page */
+#counter .box {
+  margin-left: 20px;
+}
+
+#counter button {
+  margin-right: 20px;
+}
 
 
 /* Mobile Navbar */

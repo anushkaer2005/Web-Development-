@@ -72,16 +72,49 @@
 
 // Day:19
 
-let paragraph = document.querySelector("p");                   // by tag
+// let paragraph = document.querySelector("p");                   // by tag
 
-let section = document.querySelector(".mt-md");                // by class
+// let section = document.querySelector(".mt-md");                // by class
 
-let educationSection = document.getElementById("education");    // by id
+// let educationSection = document.getElementById("education");    // by id
 
-let button = document.querySelector("button");                  // by tag
+// let indexBtn = document.getElementById("indexBtn");                  // by id
 
-button.addEventListener("click", function () {
-  paragraph.textContent = "JavaScript!";
-  section.style.backgroundColor = "#0cd59c";
-  educationSection.style.backgroundColor = "#fb205b";
+// indexBtn.addEventListener("click", function () {
+//   paragraph.textContent = "JavaScript!";
+//   section.style.backgroundColor = "#0cd59c";
+//   educationSection.style.backgroundColor = "#fb205b";
+// });
+
+
+// Day:20
+
+let count = 0;
+
+let countText = document.getElementById("count");
+let increaseBt = document.getElementById("increase");
+let decreaseBt = document.getElementById("decrease");
+let resetBtn = document.getElementById("reset");
+
+// Increase
+increaseBt.addEventListener("click", function () {
+  count++;
+  countText.textContent = count;
 });
+
+// Decrease
+decreaseBt.addEventListener("click", function () {
+  if(count>0){
+    count--;
+    countText.textContent = count;
+  }
+});
+
+// Reset
+resetBtn.addEventListener("click", function () {
+  count = 0;
+  countText.textContent = count;
+});
+
+
+

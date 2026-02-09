@@ -5,41 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/script.js"></script>
 </head>
 <body>
-
-    <!-- Header with navigation -->
-    <header>
-        <h1>CONTACT</h1>
-
-        <nav role="navigation" aria-label="Main Navigation">
-            <a href="/index.html">Back to Home</a><br>
-            <a href="profile.html">Go to Profile</a>
-        </nav>
-    </header>
-
-    <!-- Contact Form -->
-    <main>
-        <form>
-            <!-- Name Input -->
-            <label for="name">Name:</label>
-            <input type="txt" name="name" id="name" required minlength="3"><br>
-
-            <!-- Email Input -->
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email" required><br>
-
-            <!-- Submit button -->
-            <button type="submit">Submit</button>
-
-        </form>
-    </main>    
-
-    <!-- Footer -->
-    <footer>
-        <p>Contact Page</p>
-    </footer>
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Contact</title>
+            <link rel="stylesheet" href="../css/style.css">
+        </head>
         
-</body>
+        <body class="contact-page">
+            <!-- Header with navigation -->
+            <header>
+                <h1>CONTACT</h1>
+
+                <nav role="navigation" aria-label="Main Navigation">
+                        <a href="../index.html">Back to Home</a><br>
+                        <a href="profile.html">Go to Profile</a><br>
+                        <a href="counter.html">Go to Counter</a>
+                </nav>
+            </header>
+
+            <!-- Contact Form -->
+            <main>
+                <form id="form" novalidate>
+                    <!-- Name Input -->
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" required minlength="3">
+                    <small id="nameError" style="color:red;"></small><br>
+
+                    <!-- Email Input -->
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required>
+                    <small id="emailError" style="color:red;"></small><br>
+
+                    <!-- Submit button -->
+                    <button type="submit" id="contactButton">Submit</button>
+                </form>
+            </main>
+
+            <!-- Footer -->
+            <footer>
+                <p>Contact Page</p>
+            </footer>
+
+            <script>
+                const form = document.getElementById("form");
+
+                if (form) {
+                    const nameInput = document.getElementById("name");
+                    const emailInput = document.getElementById("email");
+
+                    const nameError = document.getElementById("nameError");
+                    const emailError = document.getElementById("emailError");
+
+                    form.addEventListener("submit", function (event) {
+                        event.preventDefault(); // stop default behaviour
+
+                        let isValid = true;
+
+                        // Name validation
+                        if (nameInput.value.trim() === "") {
+                            nameError.textContent = "Name is required";
+                            isValid = false;} 
+                        else if (nameInput.value.trim().length < 3) {
+                            nameError.textContent = "Name must be at least 3 characters";
+                            isValid = false;} 
+                        else {
+                            nameError.textContent = "";}
+
+                        // Email validation
+                        if (emailInput.value.trim() === "") {
+                            emailError.textContent = "Email is required";
+                            isValid = false;}
+                        else if (!emailInput.value.includes("@")) {
+                            emailError.textContent = "Email must contain @";
+                            isValid = false;}
+                        else {
+                            emailError.textContent = "";}
+
+                        // Final submission
+                        if (isValid) {
+                            alert("Form submitted successfully!");
+                            form.reset();}
+                    });
+
+                    // Real-time Name Validation
+                    nameInput.addEventListener("input", function () {
+                        if (nameInput.value.trim().length >= 3) {
+                            nameError.textContent = "";}
+                    });
+
+                    // Real-time Email Validation
+                    emailInput.addEventListener("input", function () {
+                        if (emailInput.value.includes("@")) {
+                        emailError.textContent = "";}
+                    });
+                }
+                </script>
+        </body>
 </html>

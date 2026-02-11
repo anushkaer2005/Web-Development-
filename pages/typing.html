@@ -11,7 +11,7 @@
     <header>
         <h1>Typing Test</h1>
 
-        <nav>
+        <nav role="navigation" aria-label="Main Navigation">
             <a href="../index.html">Go to Home</a>
             <a href="profile.html">Go to Profile</a>
             <a href="contact.html">Go to Contact</a>
@@ -19,7 +19,7 @@
         </nav>
     </header>
 
-    <main style="padding:20px;">
+    <main style="padding:20px;" class="box">
         <!-- Fixed sentence -->
         <p id="sentence">
             Type a sentence here and see it live below!
@@ -27,7 +27,6 @@
 
         <!-- Input box -->
         <input type="text" id="typingInput" placeholder="Start typing here">
-        <br><br>
 
         <!-- Start button -->
         <button id="startBtn">Start</button>
@@ -36,6 +35,19 @@
         <p>
             You typed: <span id="output"></span>
         </p>
+
+        <!-- Timer -->
+        <p>
+            Time Left: <span id="time">60</span> seconds
+        </p>
+
+        <!-- Lenght -->
+        <p id="result"></p>
+
     </main>
+
+    <footer>
+        <p>Typing Page</p>
+    </footer>
 </body>
 </html>

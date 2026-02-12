@@ -73,6 +73,14 @@ button{
   padding: var(--space-sm) var(--space-md);
   border-radius: var(--radius-sm);
   cursor: pointer;
+  display: block;
+  margin-top: var(--space-md);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.label {
+  color: #2563eb;
 }
 
 section {
@@ -113,6 +121,9 @@ form button {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  overflow-wrap: break-word;  
+  word-wrap: break-word;     
+  text-align: center;
 }
 
 

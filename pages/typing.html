@@ -9,7 +9,9 @@
 </head>
 <body>
     <header>
-        <h1>Typing Test</h1>
+        <div class="logo">
+            <h1>Typing Test</h1>
+        </div>
 
         <nav role="navigation" aria-label="Main Navigation">
             <a href="../index.html">Go to Home</a>
@@ -19,10 +21,10 @@
         </nav>
     </header>
 
-    <main style="padding:20px;" class="box">
+    <main class="box">
         <!-- Fixed sentence -->
         <p id="sentence">
-            Type a sentence here and see it live below!
+            Type here and see it live below!
         </p>
 
         <!-- Input box -->
@@ -33,7 +35,7 @@
 
         <!-- Live input -->
         <p>
-            You typed: <span id="output"></span>
+            <span class="label">You typed:</span> <span id="output"></span>
         </p>
 
         <!-- Timer -->
@@ -42,7 +44,13 @@
         </p>
 
         <!-- Lenght -->
-        <p id="result"></p>
+        <p id="len"></p>
+
+        <!-- Best score -->
+         <p>
+            Best Score: <span id="bestScore">0</span>
+        </p>
+
 
     </main>
 

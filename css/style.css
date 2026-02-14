@@ -270,7 +270,7 @@ audio:focus{
 
 #gameArea {
   width: 350px;
-  height: 350px;
+  height: 300px;
   border: 3px solid #1d2736;
   position: relative;
 }
@@ -282,6 +282,24 @@ audio:focus{
   position: absolute;
   cursor: pointer;
 }
+
+#timer {
+  font-weight: bolder;
+  color: #e12222;
+}
+
+#restartBtn {
+  margin-top: var(--space-md);
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;        /* space between buttons */
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+}
+
 
 
 /* Mobile Navbar */

@@ -247,12 +247,14 @@ audio:focus{
 #click-game {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
 }
 
 #click-game main {
+  flex: 1;
+  padding: 40px 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -260,7 +262,7 @@ audio:focus{
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-md);
+  gap: 40px;
 }
 
 #score {
@@ -294,11 +296,66 @@ audio:focus{
 
 .button-group {
   display: flex;
-  gap: 15px;        /* space between buttons */
+  gap: 50px;        /* space between buttons */
   justify-content: center;
   align-items: center;
   margin: 15px 0;
 }
+
+#click-game .click-container p{
+  margin: 0;
+}
+
+#click-game main * {
+  margin: 0;
+}
+
+#click-game footer {
+  margin-top: auto;
+}
+
+
+/* Center login and dashboard pages */
+#login-page,
+#bank-dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#login-page main,
+#bank-dashboard main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add spacing in login form */
+#login-page form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+
+/* Fix dashboard stacking (prevent one-line layout) */
+#bank-dashboard main {
+  flex-direction: column;
+  justify-content: center;   /* keep vertical centering */
+  align-items: center;       /* keep horizontal centering */
+  gap: var(--space-lg);
+  text-align: center;
+}
+
+/* Keep Current Balance and amount in same line */
+#bank-dashboard .bank-card > h2,
+#bank-dashboard .bank-card > p {
+  display: inline-block;
+  margin: 0 var(--space-sm);
+  vertical-align: middle;
+}
+
 
 
 

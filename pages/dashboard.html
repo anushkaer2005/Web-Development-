@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/bank.js"></script>
+</head>
+<body id="bank-dashboard">
+    <header>
+        <div class="logo">
+            <h1>Bank Dashboard</h1>
+        </div>
+
+        <nav role="navigation" aria-label="Main Navigation">
+            <a href="../index.html">Go to Home</a>
+            <a href="profile.html">Go to Profile</a>
+            <a href="contact.html">Go to Contact</a>
+            <a href="counter.html">Go to Counter</a>
+            <a href="typing.html">Go to Typing Test</a>
+            <a href="click-game.html">Go to Click Game</a>
+            <a href="login.html">Go to Login</a>
+        </nav>
+    </header>
+
+    <main class="bank-card">
+
+        <!-- Balance Display -->
+        <h2>Current Balance</h2>
+        <p>
+            $<span id="balance">1000</span>
+        </p>
+
+        <!-- Deposit Section -->
+        <section>
+            <h2>Deposit</h2>
+            <label for="depositAmount">Amount:</label>
+            <input type="number" id="depositAmount" min="0">
+            <button id="depositBtn">Deposit</button>
+        </section>
+
+        <!-- Withdraw Section -->
+        <section>
+            <h2>Withdraw</h2>
+            <label for="withdrawAmount">Amount:</label>
+            <input type="number" id="withdrawAmount" min="0">
+            <button id="withdrawBtn">Withdraw</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Bank Dashboard Page</p>
+    </footer>
+</body>
+</html>

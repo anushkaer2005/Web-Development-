@@ -1,64 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typing Test</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/typing.js" defer></script>
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <h1>Typing Test</h1>
-        </div>
-
-        <nav role="navigation" aria-label="Main Navigation">
-            <a href="../index.html">Go to Home</a>
-            <a href="profile.html">Go to Profile</a>
-            <a href="contact.html">Go to Contact</a>
-            <a href="counter.html">Go to Counter</a>
-            <a href="click-game.html">Go to Click Game</a>
-            <a href="login.html">Go to Login</a>
-            <a href="dashboard.html">Go to Dashboard</a>
-        </nav>
-    </header>
-
-    <main class="box">
-        <!-- Fixed sentence -->
-        <p id="sentence">
-            Type here and see it live below!
-        </p>
-
-        <!-- Input box -->
-        <input type="text" id="typingInput" placeholder="Start typing here">
-
-        <!-- Start button -->
-        <button id="startBtn">Start</button>
-
-        <!-- Live input -->
-        <p>
-            <span class="label">You typed:</span> <span id="output"></span>
-        </p>
-
-        <!-- Timer -->
-        <p>
-            Time Left: <span id="time">60</span> seconds
-        </p>
-
-        <!-- Lenght -->
-        <p id="len"></p>
-
-        <!-- Best score -->
-         <p>
-            Best Score: <span id="bestScore">0</span>
-        </p>
-
-
-    </main>
-
-    <footer>
-        <p>Typing Page</p>
-    </footer>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Typing Test</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <script src="../js/typing.js" defer></script>
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="logo">Typing Test</h1>
+            <nav class="nav" role="navigation" aria-label="Main Navigation">
+                <a href="../index.html">Go to Home</a>
+                <a href="profile.html">Go to Profile</a>
+                <a href="contact.html">Go to Contact</a>
+                <a href="counter.html">Go to Counter</a>
+                <a href="click-game.html">Go to Click Game</a>
+                <a href="login.html">Go to Login</a>
+                <a href="dashboard.html">Go to Dashboard</a>
+            </nav>
+        </header>
+        <main class="main-wrapper center-page">
+            <div class="card center-card">
+                <p id="sentence">Type here and see it live below!</p>
+                <input type="text" id="typingInput" placeholder="Start typing here">
+                <button id="startBtn">Start</button>
+                <p>You typed: <span id="output"></span></p>
+                <p>Time Left: <span id="time">60</span></p>
+                <p id="len"></p>
+                <p>Best Score: <span id="bestScore">0</span></p>
+            </div>
+        </main>
+        <footer class="footer">
+            <p>Typing Page</p>
+        </footer>
+    </body>
 </html>

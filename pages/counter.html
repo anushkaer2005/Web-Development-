@@ -1,39 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/script.js" defer></script>
-</head>
-<body id="counter">
-    <header>
-        <div class="logo">
-            <h1>Counter App</h1>
-        </div>
-
-        <nav role="navigation" aria-label="Main Navigation">
-            <a href="/index.html">Back to Home</a><br>
-            <a href="profile.html">Go to Profile</a><br>
-            <a href="contact.html">Go to Contact</a>
-            <a href="typing.html">Go to Typing Test</a>
-            <a href="click-game.html">Go to Click Game</a>
-            <a href="login.html">Go to Login</a>
-            <a href="dashboard.html">Go to Dashboard</a>
-        </nav>
-    </header>
-
-    <main class="box">
-        <p id="count">0</p>
-
-        <button id="increase">Increase</button>
-        <button id="decrease">Decrease</button>
-        <button id="reset">Reset</button>
-    </main>
-
-    <footer>
-        <p>Counter App Page</p>
-    </footer>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Counter</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <script src="../js/script.js" defer></script>
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="logo">Counter App</h1>
+            <nav class="nav" role="navigation" aria-label="Main Navigation">
+                <a href="../index.html">Back to Home</a><br>
+                <a href="profile.html">Go to Profile</a><br>
+                <a href="contact.html">Go to Contact</a>
+                <a href="typing.html">Go to Typing Test</a>
+                <a href="click-game.html">Go to Click Game</a>
+                <a href="login.html">Go to Login</a>
+                <a href="dashboard.html">Go to Dashboard</a>
+            </nav>
+        </header>
+        <main class="main-wrapper center-page">
+            <div class="card center-card">
+                <h2 id="count">0</h2>
+                <button id="increase">Increase</button>
+                <button id="decrease">Decrease</button>
+                <button id="reset">Reset</button>
+            </div>
+        </main>
+        <footer class="footer">
+            <p>Counter App Page</p>
+        </footer>
+    </body>
 </html>

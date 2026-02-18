@@ -9,59 +9,58 @@ const restartBtn = document.getElementById("restartBtn");
 
 let score = 0;
 let time = 30;
-let timer;
+let gameTimer;
 
-// Move the square
+// Move square to random position
 function moveSquare() {
-  const maxX = gameArea.clientWidth - 50;
-  const maxY = gameArea.clientHeight - 50;
 
-  const x = Math.floor(Math.random() * maxX);
-  const y = Math.floor(Math.random() * maxY);
+  let areaWidth = gameArea.clientWidth - 50;
+  let areaHeight = gameArea.clientHeight - 50;
 
-  square.style.left = x + "px";
-  square.style.top = y + "px";
+  let randomX = Math.random() * areaWidth;
+  let randomY = Math.random() * areaHeight;
+
+  square.style.left = randomX + "px";
+  square.style.top = randomY + "px";
 }
 
-// Start timer
+// Start game
 function startGame() {
-  timer = setInterval(function () {
-    time--;
-    timerText.textContent = "Time left: " + time + " seconds";
-
-
-    if (time === 0) {
-      clearInterval(timer);
-      square.style.display = "none";
-    }
-  }, 1000);
-}
-
-// Square click
-square.addEventListener("click", function () {
-  score++;
-  scoreText.textContent = "Score: " + score;
-  moveSquare();
-});
-
-// Start button
-startBtn.addEventListener("click", function () {
-  square.style.display = "block";
-  startGame();
-  moveSquare();
-});
-
-// Restart button
-restartBtn.addEventListener("click", function () {
-  clearInterval(timer);
 
   score = 0;
   time = 30;
 
-  scoreText.textContent = "Score: 0";
-  timerText.textContent = "Time left: 30 seconds";
+  scoreText.textContent = "Score: " + score;
+  timerText.textContent = "Time left: " + time + " seconds";
 
+  moveSquare();
 
-  square.style.display = "block";
-});
+  gameTimer = setInterval(function () {
 
+    time--;
+    timerText.textContent = "Time left: " + time + " seconds";
+
+    if (time <= 0) {
+      clearInterval(gameTimer);
+      alert("Game Over! Your score: " + score);
+    }
+
+  }, 1000);
+}
+
+// Increase score
+if (square) {
+  square.addEventListener("click", function () {
+    score++;
+    scoreText.textContent = "Score: " + score;
+    moveSquare();
+  });
+}
+
+if (startBtn) {
+  startBtn.addEventListener("click", startGame);
+}
+
+if (restartBtn) {
+  restartBtn.addEventListener("click", startGame);
+}

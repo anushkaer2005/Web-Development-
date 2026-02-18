@@ -1,43 +1,61 @@
 // Day 22
-const typingInput = document.getElementById("typingInput");
-const output = document.getElementById("output");
 
-if (typingInput && output) {
+/* =================================
+   LIVE TYPING DISPLAY
+================================= */
+
+const typingInput = document.getElementById("typingInput");
+const outputText = document.getElementById("output");
+const startBtn = document.getElementById("startBtn");
+const timeText = document.getElementById("time");
+const lengthText = document.getElementById("len");
+const bestScoreText = document.getElementById("bestScore");
+
+let time = 60;
+let timerInterval;
+let bestScore = localStorage.getItem("bestScore") || 0;
+
+if (bestScoreText) {
+  bestScoreText.textContent = bestScore;
+}
+
+if (typingInput && outputText) {
   typingInput.addEventListener("input", function () {
-    output.textContent = typingInput.value;
+    outputText.textContent = typingInput.value;
   });
 }
 
+/* =================================
+   START TIMER
+================================= */
 
-// Day 23
-const startBtn = document.getElementById("startBtn");
-const timeDisplay = document.getElementById("time");
+if (startBtn && typingInput) {
 
-let time = 60;
-typingInput.disabled = true;
+  typingInput.disabled = true;
 
-if (startBtn && typingInput && timeDisplay) {
   startBtn.addEventListener("click", function () {
 
+    // Reset values
     time = 60;
-    timeDisplay.textContent = time;
+    typingInput.value = "";
+    outputText.textContent = "";
+    timeText.textContent = time;
     typingInput.disabled = false;
+    typingInput.focus();
 
-    const timer = setInterval(function () {
+    clearInterval(timerInterval);
+
+    timerInterval = setInterval(function () {
+
       time--;
-      
-      if (time < 0) {
-        time = 0;
-      }
-      
-      timeDisplay.textContent = time;
+      timeText.textContent = time;
 
-      if (time === 0) {
-        clearInterval(timer);
+      if (time <= 0) {
+        clearInterval(timerInterval);
         typingInput.disabled = true;
-        
-        const typedLength = typingInput.value.length;
-        len.textContent = "Typed Length: " + typedLength;
+
+        let typedLength = typingInput.value.length;
+        lengthText.textContent = "Typed Length: " + typedLength;
 
         // Save best score
         if (typedLength > bestScore) {
@@ -46,21 +64,8 @@ if (startBtn && typingInput && timeDisplay) {
           bestScoreText.textContent = bestScore;
         }
       }
+
     }, 1000);
+
   });
 }
-
-
-// Day 24
-
-const bestScoreText = document.getElementById("bestScore");
-
-// Load best score when page loads
-let bestScore = localStorage.getItem("bestScore");
-
-if (bestScore === null) {
-  bestScore = 0;
-  localStorage.setItem("bestScore", bestScore);
-}
-
-bestScoreText.textContent = bestScore;

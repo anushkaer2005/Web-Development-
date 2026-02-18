@@ -8,14 +8,10 @@
         <script src="js/script.js" defer></script>
     </head>
     <body>
-
         <!-- Header section with navigation -->
-        <header>
-            <div class="logo">
-                <h1>Anushka Siwach</h1>
-            </div>
-
-            <nav role="navigation" aria-label="Main Navigation">
+        <header class="header">
+            <h1 class="logo">Anushka Siwach</h1>
+            <nav class="nav" role="navigation" aria-label="Main Navigation">
                 <a href="pages/profile.html">Go to Profile</a>
                 <a href="pages/contact.html">Go to Contact</a>
                 <a href="pages/counter.html">Go to Counter</a>
@@ -24,116 +20,104 @@
                 <a href="pages/login.html">Go to Login</a>
                 <a href="pages/dashboard.html">Go to Dashboard</a>
             </nav>
-
-            <button type="button" id="indexBtn">Button</button>
+            <button id="indexBtn">Button</button>
         </header>
-
         <!-- Main content of the page -->
-        <main class="layout">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <h3>Sidebar</h3>
-                
-            </aside>
-
-            <div class="content container">
-                <h2>Web Development for Begginers</h2>
-                <p>It is a web development programming course.</p>
-                <p>It comprises lessons and assignments which enhance the skills.</p>
-
-                <!-- About Section  -->
-                <section class="mt-md">
-                    <h2>About</h2>
-                    <ul>
-                        <li>This is a web development course.</li>
-                        <li>You have to practice it daily.</li>
-                        <li>This is best for beginners.</li>
-                    </ul>
-                </section>
-
-                <!-- Education Section -->
-                <section class="mt-md" id="education">
-                    <h2>Education</h2>
-
-                    <table border="1">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Class</th>
-                                <th>Roll No.</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Anu</td>
-                                <td>9th</td>
-                                <td>23</td>
-                            </tr>
-                            <tr>
-                                <td>Ram</td>
-                                <td>10th</td>
-                                <td>45</td>
-                            </tr>
-                            <tr>
-                                <td>Alex</td>
-                                <td>11th</td>
-                                <td>12</td>
-                            </tr>
-                            <tr>
-                                <td>Aksh</td>
-                                <td>12th</td>
-                                <td>22</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-
-                <!-- Skills Section -->
-                <section class="mt-md">
-                    <h2>Skills</h2>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                    </ul>
-                </section>
-
-                <!-- Media Content -->
-                <section class="mt-md">
-                    <h2>Media</h2>
-
-                    <!-- Image -->
-                    <figure>
-                        <img src="media/image.jpg" alt="laptop">
-                        <figcaption>Working laptop.</figcaption>
-                    </figure>
-
-                    <!-- Audio -->
-                    <figure>
-                        <audio controls>
-                            <source src="media/audio.mpeg" type="audio/mpeg">
-                        </audio>
-                        <figcaption>Background Audio</figcaption>
-                    </figure>
-                </section>
-
-                <!-- Terrarium Section -->
-                <section class="mt-md">
-                    <h2 class="text-center mb-lg">Terrarium</h2>
-
-                    <div class="terrarium">
-                        <div class="card">Plant 1</div>
-                        <div class="card">Plant 2</div>
-                        <div class="card">Plant 3</div>
-                        <div class="card">Plant 4</div>
-                    </div>
-                </section>
+        <main class="main-wrapper">
+            <div class="grid-layout">
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <h3>Sidebar</h3>
+                </aside>
+                <div class="content">
+                    <h2>Web Development for Begginers</h2>
+                    <p>It is a web development programming course.</p>
+                    <p>It comprises lessons and assignments which enhance the skills.</p>
+                    <!-- About Section  -->
+                    <section class="card">
+                        <h2>About</h2>
+                        <ul>
+                            <li>This is a web development course.</li>
+                            <li>You have to practice it daily.</li>
+                            <li>This is best for beginners.</li>
+                        </ul>
+                    </section>
+                    <!-- Education Section -->
+                    <section class="card" id="education">
+                        <h2>Education</h2>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Class</th>
+                                    <th>Roll No.</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Anu</td>
+                                    <td>9th</td>
+                                    <td>23</td>
+                                </tr>
+                                <tr>
+                                    <td>Ram</td>
+                                    <td>10th</td>
+                                    <td>45</td>
+                                </tr>
+                                <tr>
+                                    <td>Alex</td>
+                                    <td>11th</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr>
+                                    <td>Aksh</td>
+                                    <td>12th</td>
+                                    <td>22</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <!-- Skills Section -->
+                    <section class="card">
+                        <h2>Skills</h2>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </section>
+                    <!-- Media Content -->
+                    <section class="card">
+                        <h2>Media</h2>
+                        <!-- Image -->
+                        <figure>
+                            <img src="media/image.jpg" alt="laptop">
+                            <figcaption>Working laptop.</figcaption>
+                        </figure>
+                        <!-- Audio -->
+                        <figure>
+                            <audio controls>
+                                <source src="media/audio.mpeg" type="audio/mpeg">
+                            </audio>
+                            <figcaption>Background Audio</figcaption>
+                        </figure>
+                    </section>
+                    <!-- Terrarium Section -->
+                    <section class="card">
+                        <h2 class="text-center mb-lg">Terrarium</h2>
+                        <div class="terrarium">
+                            <div class="plant">Plant 1</div>
+                            <div class="plant">Plant 2</div>
+                            <div class="plant">Plant 3</div>
+                            <div class="plant">Plant 4</div>
+                        </div>
+                    </section>
+                </div>
             </div>
         </main>
-
         <!-- Footer section with Date -->
-        <footer>
-            <p>15 February 2026</p>
+        <footer class="footer">
+            <p>18 February 2026</p>
         </footer>
     </body>
 </html>

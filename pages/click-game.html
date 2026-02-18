@@ -1,52 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Click Game</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/click-game.js" defer></script>
-</head>
-<body id="click-game">
-    <header>
-        <div class="logo">
-            <h1>Click Game</h1>
-        </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Click Game</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <script src="../js/click-game.js" defer></script>
+    </head>
+    <body>
+        <!-- Header with navigation -->
+        <header class="header">
+            <h1 class="logo">Click Game</h1>
+            <nav class="nav" role="navigation" aria-label="Main Navigation">
+                <a href="../index.html">Go to Home</a>
+                <a href="profile.html">Go to Profile</a>
+                <a href="contact.html">Go to Contact</a>
+                <a href="counter.html">Go to Counter</a>
+                <a href="typing.html">Go to Typing Test</a>
+                <a href="login.html">Go to Login</a>
+                <a href="dashboard.html">Go to Dashboard</a>
+            </nav>
+        </header>
 
-        <nav role="navigation" aria-label="Main Navigation">
-            <a href="../index.html">Go to Home</a>
-            <a href="profile.html">Go to Profile</a>
-            <a href="contact.html">Go to Contact</a>
-            <a href="counter.html">Go to Counter</a>
-            <a href="typing.html">Go to Typing Test</a>
-            <a href="login.html">Go to Login</a>
-            <a href="dashboard.html">Go to Dashboard</a>
-        </nav>
-    </header>
+        <!-- Main content of the page -->
+        <main class="main-wrapper center-page">
+            <div class="card center-card">
+                <!-- Shows timer -->
+                <p id="timer">Time left: 30 seconds</p>
+                <!-- Shows score -->
+                <p id="score">Score: 0</p>
 
-    <main class="click-container">
+                <div id="gameArea">
+                    <div id="square"></div>
+                </div>
 
-        <!-- Buttons -->
-        <div class="button-group">
-            <button id="startBtn">Start</button>
-            <button id="restartBtn">Restart</button>
-        </div>
+                <!-- Start button -->
+                <button id="startBtn">Start</button>
 
-        <!-- Timer -->
-        <p id="timer">Time left: 30 seconds</p>
-
-        <!-- Score -->
-        <p id="score">Score: 0</p>
-
-        <!-- Game Container -->
-        <div id="gameArea">
-            <div id="square"></div>
-        </div>
-    </main>
-
-    
-    <footer>
-        <p>Click Game Page</p>
-    </footer>
-</body>
+                <!-- Restart button -->
+                <button id="restartBtn">Restart</button>
+            </div>
+        </main>
+        <footer class="footer">
+            <p>Click Game Page</p>
+        </footer>
+    </body>
 </html>

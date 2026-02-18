@@ -1,39 +1,37 @@
-// Get elements
-const balanceElement = document.getElementById("balance");
+// Day-28
+
+const balanceText = document.getElementById("balance");
 const depositInput = document.getElementById("depositAmount");
 const withdrawInput = document.getElementById("withdrawAmount");
 const depositBtn = document.getElementById("depositBtn");
 const withdrawBtn = document.getElementById("withdrawBtn");
 
-// Store balance as number
-let balance = Number(balanceElement.textContent);
+let balance = 1000;
 
-// Deposit Logic
-depositBtn.addEventListener("click", function () {
-    let amount = Number(depositInput.value);
+// Deposit
+if (depositBtn) {
+    depositBtn.addEventListener("click", function () {
+        let amount = Number(depositInput.value);
+        if (amount > 0) {
+            balance += amount;
+            balanceText.textContent = balance;
+            depositInput.value = "";
+        } else {
+            alert("Enter valid deposit amount");
+        }
+    });
+}
 
-    if (amount > 0) {
-        balance = balance + amount;
-        balanceElement.textContent = balance;
-        depositInput.value = "";
-    } else {
-        alert("Enter a valid deposit amount");
-    }
-});
-
-// Withdraw Logic
-withdrawBtn.addEventListener("click", function () {
-    let amount = Number(withdrawInput.value);
-
-    if (amount <= 0) {
-        alert("Enter a valid withdraw amount");
-    } 
-    else if (amount > balance) {
-        alert("Insufficient balance");
-    } 
-    else {
-        balance = balance - amount;
-        balanceElement.textContent = balance;
-        withdrawInput.value = "";
-    }
-});
+// Withdraw
+if (withdrawBtn) {
+    withdrawBtn.addEventListener("click", function () {
+        let amount = Number(withdrawInput.value);
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            balanceText.textContent = balance;
+            withdrawInput.value = "";
+        } else {
+            alert("Invalid withdraw amount");
+        }
+    });
+}

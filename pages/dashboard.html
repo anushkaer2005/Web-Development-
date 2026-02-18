@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bank Dashboard</title>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/bank.js"></script>
+    <script src="../js/bank.js" defer></script>
 </head>
-<body id="bank-dashboard">
-    <header>
-        <div class="logo">
-            <h1>Bank Dashboard</h1>
-        </div>
+<body>
 
-        <nav role="navigation" aria-label="Main Navigation">
+    <!-- HEADER OF PAGE WITH NAVIGATION -->
+    <header class="header">
+        <h1 class="logo">Bank Dashboard</h1>
+
+        <nav class="nav" role="navigation" aria-label="Main Navigation">
             <a href="../index.html">Go to Home</a>
             <a href="profile.html">Go to Profile</a>
             <a href="contact.html">Go to Contact</a>
@@ -24,33 +24,26 @@
         </nav>
     </header>
 
-    <main class="bank-card">
+    <!-- Main content of the page -->
+    <main class="main-wrapper center-page">
+        <div class="card center-card">
+            <!-- Shows current balance -->
+            <h2 class="balance-title">Current Balance: $<span id="balance" class="balance-text">1000</span></h2>
 
-        <!-- Balance Display -->
-        <h2>Current Balance</h2>
-        <p>
-            $<span id="balance">1000</span>
-        </p>
-
-        <!-- Deposit Section -->
-        <section>
-            <h2>Deposit</h2>
-            <label for="depositAmount">Amount:</label>
-            <input type="number" id="depositAmount" min="0">
+            <!-- Deposit -->
+            <label>Deposit</label>
+            <input type="number" id="depositAmount">
             <button id="depositBtn">Deposit</button>
-        </section>
 
-        <!-- Withdraw Section -->
-        <section>
-            <h2>Withdraw</h2>
-            <label for="withdrawAmount">Amount:</label>
-            <input type="number" id="withdrawAmount" min="0">
+            <!-- Withdraw -->
+            <label>Withdraw</label>
+            <input type="number" id="withdrawAmount">
             <button id="withdrawBtn">Withdraw</button>
-        </section>
-
+        </div>
     </main>
 
-    <footer>
+    <!-- Footer of the page -->
+    <footer class="footer">
         <p>Bank Dashboard Page</p>
     </footer>
 </body>

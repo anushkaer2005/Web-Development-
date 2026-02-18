@@ -1,417 +1,277 @@
+/* ROOT VARIABLES*/
+
 :root {
-  --primary-color: #2563eb;
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --light-blue: #a6d6f6;
+  --background: #f9fafb;
+  --card-bg: #ffffff;
   --text-color: #1f2937;
-  --font-base: 16px;
-  --space-md: 16px;
-  --font-lg: 24px;
-  --font-xl: 32px;
+
   --space-sm: 8px;
+  --space-md: 16px;
   --space-lg: 24px;
-  --radius-sm: 4px;
-  --radius-md: 8px;
+
+  --radius: 8px;
 }
 
-html, body{
-  height: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
+  background-color: var(--background);
   color: var(--text-color);
-  margin: 0;
-  font-size: var(--font-base);
-  background-color: #f9fafb;
+
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
-h1,h2 {
-  color: var(--primary-color);
+.header {
+  background-color: var(--light-blue);
+  padding: var(--space-md);
 
-}
-
-h1{
-  font-size: var(--font-xl);
-}
-
-h2{
-  font-size: var(--font-lg);
-}
-
-header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: var(--space-md);
-  background-color: #a6d6f6;
-  padding: 0 var(--space-md);
-  border-bottom: 2px solid #e5e7eb;
 }
 
-nav{
+.logo {
+  color: var(--primary);
+}
+
+.nav {
   display: flex;
-  justify-content: center;
   gap: var(--space-md);
   flex-wrap: wrap;
-  text-align: center;
-  margin: 0 auto;
 }
 
-nav a{
+.nav a {
   text-decoration: none;
-  color: #2563eb;
+  color: var(--primary);
+  font-weight: 500;
 }
 
-.logo h1{
-  color: #2563eb;
-}
-
-button{
-  background-color: #2563eb;
-  color: white;
-  border: none;
-  padding: var(--space-sm) var(--space-md);
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  display: block;
-  margin-top: var(--space-md);
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.label {
-  color: #2563eb;
-}
-
-section {
-  margin-bottom: var(--space-md);
-  margin-top: var(--space-md);
-}
-
-table,ul,ol,p{
-  max-width: 800px;
+.nav a:hover {
+  text-decoration: underline;
 }
 
 
-figure {
-  padding: var(--space-md);
-  
-}
+/* CENTER CONTENT*/
 
-.contact-page main {
-  padding-left: 20px;
-}
-
-form label {
-  display: block;
-  margin: 10px 0;
-}
-
-form input {
-  display: block;
-  margin-bottom: 15px;
-  padding: 8px;
-}
-
-form button {
-  margin-top: 15px;
-}
-
-.box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 1200px;
-  overflow-wrap: break-word;  
-  word-wrap: break-word;     
-  text-align: center;
-  height: 100%;
+.main-wrapper {
+  flex: 1;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 var(--space-md);
 }
 
 
-/* *{
-  outline: 1px solid grey;
-} */
+/* GRID LAYOUT (INDEX PAGE) */
 
-
-
-/* Grid layout */
-.layout {
+.grid-layout {
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: var(--space-md);
 }
 
+
+/* SIDEBAR */
+
 .sidebar {
-  border-right: 2px solid #e5e7eb;
-  padding-right: var(--space-md);
-  padding: 0 var(--space-md);
-  background-color: #f3f4f6;
+  background: #f3f4f6;
+  padding: var(--space-md);
+  border-radius: var(--radius);
 }
 
-.sidebar h3 {
-  color: #2563eb;
-  margin-bottom: var(--space-md);
+
+/* MAIN CONTENT COLUMN */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
 }
 
-footer{
+.card {
+  background: var(--card-bg);
+  padding: var(--space-md);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.center-page {
   display: flex;
   justify-content: center;
-  background-color: #8fc0d4;
-  padding-top: var(--space-md);
-  padding-bottom: var(--space-md);
-  margin-top: auto;
+  align-items: center;
+}
+
+.center-card {
+  width: 100%;
+  max-width: 450px;
+}
+
+
+/* BUTTON STYLE */
+
+button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius);
+  cursor: pointer;
+  margin-top: var(--space-sm);
+}
+
+button:hover {
+  background: var(--primary-dark);
+}
+
+input {
+  width: 100%;
+  padding: var(--space-sm);
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-md);
+  border-radius: var(--radius);
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+label {
+  font-weight: 500;
+}
+
+
+/* TABLE STYLE */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--space-sm);
+}
+
+.table th,
+.table td {
+  border: 1px solid #ccc;
+  padding: var(--space-sm);
   text-align: center;
 }
 
+.table th {
+  background: #e0f2fe;
+}
 
-/* Terrarium Layout */
+
+/* TERRARIUM GRID */
+
 .terrarium {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-md);
-  justify-content: center;
-  align-items: stretch;
 }
 
-.card {
-  background-color: #e0f2fe;
+.plant {
+  background: #e0f2fe;
   padding: var(--space-md);
   text-align: center;
-  font-weight: bold;
+  border-radius: var(--radius);
 }
 
 
-/* UI Interaction */
-nav a:hover{
-  text-decoration: underline;
-  transform: scale(0.97);
-}
-
-nav a:focus{
-  outline: 3px solid blue;
-}
-
-nav a:active{
-  background-color: lemonchiffon;
-  
-}
-
-button:hover{
-  background-color: darkslateblue;
-}
-
-button:focus{
-  outline: 4px solid black;
-}
-
-audio:focus{
-  outline: 3px solid #115fb7;
-}
-
-
-/*Utility Classes */
-.container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 var(--space-md);
-}
-
-.text-center {
-  text-align: center;
-}
-
-.mt-md {
-  margin-top: var(--space-md);
-}
-
-.mb-lg {
-  margin-bottom: var(--space-lg);
-}
-
-
-/* Counter page */
-#counter .box {
-  margin-left: 20px;
-}
-
-#counter button {
-  margin-right: 20px;
-}
-
-
-/* Click Game CSS */
-
-#click-game {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
-#click-game main {
-  flex: 1;
-  padding: 40px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.click-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-}
-
-#score {
-  font-size: var(--font-lg);
-  font-weight: bold;
-}
+/* CLICK GAME AREA */
 
 #gameArea {
-  width: 350px;
-  height: 300px;
-  border: 3px solid #1d2736;
+  width: 250px;
+  height: 250px;
+  background: #e5e7eb;
   position: relative;
+  margin: var(--space-md) 0;
+  border-radius: var(--radius);
 }
 
 #square {
   width: 50px;
   height: 50px;
-  background-color: var(--primary-color);
+  background: var(--primary);
   position: absolute;
   cursor: pointer;
+  border-radius: 6px;
 }
 
-#timer {
-  font-weight: bolder;
-  color: #e12222;
+
+/* TYPING PAGE TEXT */
+
+#sentence {
+  margin-bottom: var(--space-md);
 }
 
-#restartBtn {
-  margin-top: var(--space-md);
+#output {
+  font-weight: bold;
+  color: var(--primary);
 }
 
-.button-group {
-  display: flex;
-  gap: 50px;        /* space between buttons */
-  justify-content: center;
-  align-items: center;
-  margin: 15px 0;
+/* DASHBOARD STYLE */
+
+.balance-title {
+  color: var(--primary);   /* Blue color */
 }
 
-#click-game .click-container p{
-  margin: 0;
+.balance-text {
+  color: var(--primary);   /* Blue color */
+  font-weight: bold;
+  font-size: 22px;
 }
 
-#click-game main * {
-  margin: 0;
+.center-card label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
 }
 
-#click-game footer {
+.center-card input {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.center-card button {
+  display: block;      
+  width: 100%;         
+  margin-bottom: 15px;
+}
+
+
+/* FOOTER */
+
+.footer {
+  text-align: center;
+  padding: var(--space-md);
+  background: #8fc0d4;
   margin-top: auto;
 }
 
 
-/* Center login and dashboard pages */
-#login-page,
-#bank-dashboard {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
+/* RESPONSIVE DESIGN */
 
-#login-page main,
-#bank-dashboard main {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+@media (max-width: 768px) {
 
-/* Add spacing in login form */
-#login-page form {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-}
-
-
-/* Fix dashboard stacking (prevent one-line layout) */
-#bank-dashboard main {
-  flex-direction: column;
-  justify-content: center;   /* keep vertical centering */
-  align-items: center;       /* keep horizontal centering */
-  gap: var(--space-lg);
-  text-align: center;
-}
-
-/* Keep Current Balance and amount in same line */
-#bank-dashboard .bank-card > h2,
-#bank-dashboard .bank-card > p {
-  display: inline-block;
-  margin: 0 var(--space-sm);
-  vertical-align: middle;
-}
-
-
-
-
-/* Mobile Navbar */
-@media (max-width: 600px) {
-  header h1 {
-    margin-top: 0;
-  }
-
-  header button {
-    margin-bottom: 0;
-  }
-
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-md);
-    padding-top: var(--radius-md);
-    padding-bottom: var(--space-md);
-  }
-
-  nav {
-    flex-direction: column;
-    gap: var(--space-sm);
-  }
-
-  .layout {
+  .grid-layout {
     grid-template-columns: 1fr;
   }
 
-  .content {
-    order: 1;
+  .nav {
+    justify-content: center;
   }
 
-  .sidebar {
-    order: 2;
-    border-right: none;
-    border-top: 2px solid #ddd;
-    border-bottom: 2px solid #ddd;
-    padding-right: 0;
-    padding-bottom: var(--space-md);
-  }
-
-  section {
-    margin-top: var(--space-md);
-    margin-bottom: var(--space-md);
-  }
-
-  .terrarium{
-    padding-right: var(--space-md);
-  }
-
-  footer {
-    text-align: center;
-    padding-top: var(--space-md);
-    padding-bottom: var(--space-md);
+  .header {
+    flex-direction: column;
+    gap: var(--space-sm);
   }
 
 }

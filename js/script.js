@@ -88,33 +88,50 @@
 
 
 // Day:20
+/* =================================
+   INDEX BUTTON
+================================= */
+
+const indexBtn = document.getElementById("indexBtn");
+
+if (indexBtn) {
+  indexBtn.addEventListener("click", function () {
+    alert("Welcome to my website!");
+  });
+}
+
+
+/* =================================
+   COUNTER APP
+================================= */
+
+const countText = document.getElementById("count");
+const increaseBtn = document.getElementById("increase");
+const decreaseBtn = document.getElementById("decrease");
+const resetBtn = document.getElementById("reset");
 
 let count = 0;
 
-let countText = document.getElementById("count");
-let increaseBt = document.getElementById("increase");
-let decreaseBt = document.getElementById("decrease");
-let resetBtn = document.getElementById("reset");
-
 // Increase
-increaseBt.addEventListener("click", function () {
-  count++;
-  countText.textContent = count;
-});
+if (increaseBtn) {
+  increaseBtn.addEventListener("click", function () {
+    count++;
+    countText.textContent = count;
+  });
+}
 
 // Decrease
-decreaseBt.addEventListener("click", function () {
-  if(count>0){
+if (decreaseBtn) {
+  decreaseBtn.addEventListener("click", function () {
     count--;
     countText.textContent = count;
-  }
-});
+  });
+}
 
 // Reset
-resetBtn.addEventListener("click", function () {
-  count = 0;
-  countText.textContent = count;
-});
-
-
-
+if (resetBtn) {
+  resetBtn.addEventListener("click", function () {
+    count = 0;
+    countText.textContent = count;
+  });
+}

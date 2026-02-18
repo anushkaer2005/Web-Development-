@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/script.js"></script>
-</head>
-<body>
-
-    <!-- Header with navigation -->
-    <header>
-        <div class="logo">
-            <h1>PROFILE</h1>
-        </div>
-
-        <nav role="navigation" aria-label="Main Navigation">
-            <a href="/index.html">Back to Home</a><br>
-            <a href="contact.html">Go to Contact</a><br>
-            <a href="counter.html">Go to Counter</a>
-            <a href="typing.html">Go to Typing Test</a>
-            <a href="click-game.html">Go to Click Game</a>
-            <a href="login.html">Go to Login</a>
-            <a href="dashboard.html">Go to Dashboard</a>
-        </nav>
-    </header>
-
-    <!-- Main content of page -->
-    <main class="box">
-        <p>This is the profile page.</p>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>Profile Page</p>
-    </footer>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <script src="../js/script.js"></script>
+    </head>
+    <body>
+        <!-- Header with navigation -->
+        <header class="header">
+            <h1 class="logo">PROFILE</h1>
+            <nav class="nav" role="navigation" aria-label="Main Navigation">
+                <a href="../index.html">Back to Home</a><br>
+                <a href="contact.html">Go to Contact</a><br>
+                <a href="counter.html">Go to Counter</a>
+                <a href="typing.html">Go to Typing Test</a>
+                <a href="click-game.html">Go to Click Game</a>
+                <a href="login.html">Go to Login</a>
+                <a href="dashboard.html">Go to Dashboard</a>
+            </nav>
+        </header>
+        <!-- Main content of page -->
+        <main class="main-wrapper center-page">
+            <div class="card center-card">
+                <form id="contactForm">
+                    <label>Name</label>
+                    <input type="text" id="name" required minlength="3">
+                    <label>Email</label>
+                    <input type="email" id="email" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Profile Page</p>
+        </footer>
+    </body>
 </html>

@@ -123,8 +123,10 @@ if (increaseBtn) {
 // Decrease
 if (decreaseBtn) {
   decreaseBtn.addEventListener("click", function () {
-    count--;
-    countText.textContent = count;
+    if(count > 0) {
+      count--;
+      countText.textContent = count;
+    }
   });
 }
 

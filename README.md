@@ -1,3 +1,43 @@
+# 30-Day Web Development Project
+
+## 🔹 Project List
+
+1. Homepage
+2. Profile Page
+3. Contact Form
+4. Counter App
+5. Click Game
+6. Typing Speed Test
+7. Login Page
+8. Bank Dashboard
+---
+
+## 🔹 Key Concepts Learned
+
+- HTML structure and semantic tags
+- CSS Flexbox and Grid
+- Responsive Design
+- JavaScript DOM manipulation
+- Event listeners
+- setInterval and timers
+- LocalStorage
+- Form validation
+- GitHub deployment
+
+---
+
+## 3 Hardest Problems Faced
+
+### 1. Click Game square was moving outside the box  
+Solution: Adjusted width and height calculation in JavaScript.
+
+### 2. Buttons appearing on same line on dashboard page  
+Solution: Used display: block and margin styling in CSS.
+
+### 3. Centering layout properly  
+Solution: Used CSS Grid and max-width with margin: auto.
+
+
 ## 5 Structural Improvements
 
 1. Maintained proper heading hierarchy.
